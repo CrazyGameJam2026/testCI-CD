@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Player/MovementController.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Player/Head.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Player/Sprint.gd" type="Script" id=3]
+[ext_resource path="res://Player/Player.gd" type="Script" id="4_xyz"]
+[ext_resource path="res://Player/ModManager.gd" type="Script" id="6_abcde"]
+
+[node name="Player" instance=ExtResource( 1 )]
+script = ExtResource("4_xyz")
+
+[node name="Head" parent="." index="1" instance=ExtResource( 2 )]
+
+[node name="Sprint" type="Node" parent="." index="2"]
+script = ExtResource( 3 )
+
+[node name="ModManager" type="Node" parent="."]
+script = ExtResource("6_abcde")

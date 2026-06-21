@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=3 uid="uid://bdiqjblqj7d1y"]
+
+[ext_resource type="Script" path="res://Game2D/Main2D.gd" id="1_abcde"]
+[ext_resource type="PackedScene" uid="uid://cghs1gq2gq2gq" path="res://Game2D/Player2D.tscn" id="2_fghij"]
+
+[node name="Main2D" type="Node2D"]
+script = ExtResource("1_abcde")
+
+[node name="Player2D" parent="." instance=ExtResource("2_fghij")]
+position = Vector2(200, 100)
+
+[node name="Floor" type="StaticBody2D" parent="."]
+position = Vector2(576, 600)
+scale = Vector2(10, 1)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Floor"]
+polygon = PackedVector2Array(-57.5, -20, 57.5, -20, 57.5, 20, -57.5, 20)
+
+[node name="Polygon2D" type="Polygon2D" parent="Floor"]
+color = Color(0.5, 0.5, 0.5, 1)
+polygon = PackedVector2Array(-57.5, -20, 57.5, -20, 57.5, 20, -57.5, 20)
+
+[node name="Platform1" type="StaticBody2D" parent="."]
+position = Vector2(400, 500)
+scale = Vector2(2, 1)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Platform1"]
+polygon = PackedVector2Array(-57.5, -20, 57.5, -20, 57.5, 20, -57.5, 20)
+
+[node name="Polygon2D" type="Polygon2D" parent="Platform1"]
+color = Color(0.5, 0.5, 0.5, 1)
+polygon = PackedVector2Array(-57.5, -20, 57.5, -20, 57.5, 20, -57.5, 20)
+
+[node name="Platform2" type="StaticBody2D" parent="."]
+position = Vector2(650, 420)
+scale = Vector2(2, 1)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Platform2"]
+polygon = PackedVector2Array(-57.5, -20, 57.5, -20, 57.5, 20, -57.5, 20)
+
+[node name="Polygon2D" type="Polygon2D" parent="Platform2"]
+color = Color(0.5, 0.5, 0.5, 1)
+polygon = PackedVector2Array(-57.5, -20, 57.5, -20, 57.5, 20, -57.5, 20)

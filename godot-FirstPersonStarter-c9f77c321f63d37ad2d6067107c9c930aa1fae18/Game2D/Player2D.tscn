@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://cghs1gq2gq2gq"]
+
+[ext_resource type="Script" path="res://Game2D/Player2D.gd" id="1_fghij"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_12345"]
+radius = 20.0
+height = 80.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_67890"]
+albedo_color = Color(0, 0.6, 0.8, 1)
+
+[node name="Player2D" type="CharacterBody2D"]
+script = ExtResource("1_fghij")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_12345")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+material = SubResource("StandardMaterial3D_67890")
+polygon = PackedVector2Array([-20, -40, 20, -40, 20, 40, -20, 40])
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.5, 1.5)

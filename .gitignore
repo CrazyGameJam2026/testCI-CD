@@ -1,0 +1,33 @@
+# Godot 4+ spécifiques
+.godot/
+.nomedia
+
+# Godot – import/cache
+.import/
+
+# Export artefacts
+export/
+_export/
+
+# Profils d’export
+export_presets.cfg
+export_credentials.cfg
+
+# Traductions
+*.translation
+
+# Mono (C#)
+.mono/
+data_*/
+mono_crash.*.json
+
+# Cache et logs
+*.tmp
+*.log
+shader_cache/
+logs/
+
+# Systèmes & IDE
+.DS_Store
+Thumbs.db
+.idea/
