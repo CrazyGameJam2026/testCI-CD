@@ -9,8 +9,6 @@
 export/
 _export/
 
-# Profils d’export
-export_presets.cfg
 export_credentials.cfg
 
 # Traductions
